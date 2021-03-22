@@ -97,7 +97,7 @@ def _items(username, password):
     const bootData = scopeObj.game.state.states.Boot._gameData;
     const backpackData = playerObject.backpack.data;
     
-    playerObject.data.gold = playerObject.data.stars = playerObject.data.bountyScore = playerObject.data.level = 1e69;
+    playerObject.data.gold = playerObject.data.stars = playerObject.data.bountyScore = playerObject.data.level = 100;
 
     // All equipment
     let categories = ["boots", "follow", "fossil", "hat", "key", "mathTownFrame", "mathTownInterior", "outfit", "relic", "spellRelic", "weapon"];
@@ -170,7 +170,7 @@ async def gold(ctx, username, password, gold):
 async def level(ctx, username, password, level):
     """
     Change user level.
-    """
+    """100
     t = threading.Thread(name="level",target=_level, args=(username, password, level))
     t.start()
     t.join()
