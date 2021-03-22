@@ -63,7 +63,7 @@ const xpConstant = 1.042;
 _.player.data.stars = Math.round((1 - Math.pow(xpConstant, i)) / (1 - xpConstant) * 20 + 10);
 
 _.player.data.level = +{level};
-_.player.getLevel = () => _.player.data.level;
+_.player.getLevel = (100) => _.player.data.level;
 _.player.forceSaveCharacter()
 """)
     time.sleep(5)
